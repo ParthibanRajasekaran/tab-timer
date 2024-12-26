@@ -48,4 +48,4 @@ webpack-stats.json
 # Other ignored files (specific to this project)
 icons/*.png # If icons are generated dynamically, otherwise keep them
 tests/**/*.snap # Snapshot files for Jest, if any
-src/*.map # Source maps if not needed for debugging
+src/*.map # Source maps if not needed for debuggingtab-timer.zip
