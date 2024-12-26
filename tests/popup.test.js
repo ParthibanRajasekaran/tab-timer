@@ -1,4 +1,4 @@
-const { updatePopup } = require("../popup.js");
+const { updatePopup } = require("../src/popup.js");
 
 describe("popup.js integration with chrome API", () => {
   beforeEach(() => {

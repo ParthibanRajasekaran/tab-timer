@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output
+dist/
+build/
+
+# MacOS system files
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+
+# Jest coverage
+coverage/
+
+# Compiled files
+*.tsbuildinfo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Chrome extension artifacts
+manifest-v*.json
+_locales/**/*.json
+
+# Webpack artifacts
+webpack-stats.json
+
+# Other ignored files (specific to this project)
+icons/*.png # If icons are generated dynamically, otherwise keep them
+tests/**/*.snap # Snapshot files for Jest, if any
+src/*.map # Source maps if not needed for debugging

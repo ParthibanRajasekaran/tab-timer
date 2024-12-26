@@ -2,11 +2,9 @@
 function formatDuration(ms) {
   if (!ms) return "00:00:00";
 
-  let seconds = Math.floor(ms / 1000);
-  let minutes = Math.floor(seconds / 60);
-  seconds %= 60;
-  let hours = Math.floor(minutes / 60);
-  minutes %= 60;
+  const seconds = Math.floor(ms / 1000) % 60;
+  const minutes = Math.floor(ms / (1000 * 60)) % 60;
+  const hours = Math.floor(ms / (1000 * 60 * 60));
 
   return `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
@@ -17,29 +15,33 @@ function formatDuration(ms) {
 function updatePopup() {
   const activeTabInfoDiv = document.getElementById("activeTabInfo");
 
-  // Get the active tab ID and start times
+  // Fetch data from chrome.storage.local
   chrome.storage.local.get(["activeTabId", "tabStartTimes"], (data) => {
     const activeTabId = data.activeTabId;
     const tabStartTimes = data.tabStartTimes || {};
 
-    // Handle cases where no active tab or start time is missing
+    // Handle cases where no active tab is detected
     if (!activeTabId) {
       activeTabInfoDiv.innerHTML =
         "<p class='info'>No active tab or timer not started yet.</p>";
       return;
     }
 
+    // Handle case where the tab was opened before the extension was enabled
     if (!tabStartTimes[activeTabId]) {
       activeTabInfoDiv.innerHTML = `
         <p class='info'>This tab was opened before the extension was enabled.</p>
-        <button id="refreshButton">Refresh Tab</button>
+        <button id="refreshButton" class="btn">Refresh Tab</button>
       `;
 
-      // Add event listener for the refresh button
-      document.getElementById("refreshButton").addEventListener("click", () => {
-        chrome.tabs.reload(activeTabId);
-      });
-
+      // Add event listener to the refresh button (ensure no duplicate listeners)
+      const refreshButton = document.getElementById("refreshButton");
+      if (refreshButton && !refreshButton.dataset.listenerAttached) {
+        refreshButton.addEventListener("click", () => {
+          chrome.tabs.reload(activeTabId);
+        });
+        refreshButton.dataset.listenerAttached = "true"; // Mark listener as attached
+      }
       return;
     }
 
@@ -58,12 +60,12 @@ function updatePopup() {
 
 // Set up the dynamic timer
 document.addEventListener("DOMContentLoaded", () => {
-  // Update the timer every second
+  // Update the popup UI every second
   setInterval(updatePopup, 1000);
 });
 
-// Add this at the end of popup.js
+// Export for testing
 module.exports = {
   updatePopup,
-  formatDuration, 
+  formatDuration,
 };
