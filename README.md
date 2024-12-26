@@ -92,5 +92,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Support
 
 If you have questions or need help, feel free to:
-- Open an issue on [GitHub](https://github.com/your-username/tab-timer/issues).
-- Contact us via email at [support@tabtimer.com](mailto:support@tabtimer.com).
+- Open an issue on [GitHub](https://github.com/ParthibanRajasekaran/tab-timer/issues).
+- Contact us via email at [support@tabtimer.com](mailto:rajasekaran.parthiban7@gmail.com).
