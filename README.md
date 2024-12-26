@@ -85,7 +85,15 @@ Tab Timer respects your privacy:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This extension is proprietary software. All rights are reserved by [Parthiban Rajasekaran](https://www.linkedin.com/in/parthiban-rajasekaran/).
+
+You may not use, copy, modify, or distribute this software without explicit permission from the author.
+
+For more information about licensing or inquiries, contact [rajasekaran.parthiban7@gmail.com].
+
+---
+
+Copyright (c) 2024 Parthiban Rajasekaran. All Rights Reserved.
 
 ---
 
