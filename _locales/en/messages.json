@@ -1,0 +1,11 @@
+{
+    "appName": {
+      "message": "Tab Timer",
+      "description": "The name of the extension."
+    },
+    "appDescription": {
+      "message": "Track how long a tab has been open.",
+      "description": "Description of the extension."
+    }
+  }
+  

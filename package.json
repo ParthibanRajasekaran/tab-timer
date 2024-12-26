@@ -1,0 +1,23 @@
+{
+    "name": "tab-timer",
+    "version": "1.0.0",
+    "description": "Track how long each browser tab has been open.",
+    "main": "background.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [
+        "chrome-extension",
+        "timer",
+        "productivity"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "jest-environment-jsdom": "^29.7.0"
+    },
+    "dependencies": {
+        "npm": "^11.0.0"
+    }
+}
