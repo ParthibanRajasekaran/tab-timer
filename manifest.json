@@ -3,7 +3,7 @@
   "short_name": "TabTimer",
   "version": "1.0.0",
   "manifest_version": 3,
-  "description": "Track how long each browser tab has been open with ease. A perfect tool for better time management and productivity!",
+  "description": "Tab Timer is a productivity tool that helps you track how long each browser tab has been open, aiding in better time management and productivity. All data is stored locally on your device for privacy.",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon-16.png",
@@ -18,13 +18,13 @@
     }
   },
   "background": {
-    "service_worker": "dist/background.js"
+    "service_worker": "background.js"
   },
   "permissions": ["tabs", "activeTab", "storage"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["dist/content.js"]
+      "js": ["content.js"]
     }
   ]
 }
