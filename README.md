@@ -1,7 +1,7 @@
 
 # Tab Timer
 
-Track how long each browser tab has been open with ease. **Tab Timer** is the perfect tool for better time management, productivity, and focus.
+**Tab Timer** is a lightweight Chrome extension designed to help users track how long a browser tab has been open. It helps with time management by providing visual indicators of how long each tab has been open, encouraging users to be more mindful of their time.
 
 ---
 
